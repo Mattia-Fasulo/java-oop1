@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Product {
     //*******Fields********
-    private int id;
+    private final int id;
     private String name;
     private String description;
     private double price;
