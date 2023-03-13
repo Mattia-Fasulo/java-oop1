@@ -13,9 +13,13 @@ public class Product {
     private static int count = 0;
 
     //*******constructor*******
-    public  Product(String name, String description, double price, double iva){
+    public Product(){
         Random random = new Random();
-        id = random.nextInt(100,999);
+        id = generateId();
+    }
+
+    public  Product(String name, String description, double price, double iva){
+        id = generateId();
         this.name = name;
         this.description = description;
         this.price = price;
@@ -24,6 +28,15 @@ public class Product {
     }
 
     //********methods********
+    private int generateId(){
+        Random random = new Random();
+        return random.nextInt(100,999);
+    }
+
+    public double getPriceWithIva(){
+        return price *(1 + iva) ;
+    }
+
     public String padLeft(){
         return padLeft(id, 8,'0');
     }
@@ -54,10 +67,6 @@ public class Product {
 
     public  double getIva() {
         return iva;
-    }
-
-    public double getPriceWithIva(){
-        return price *(1 + iva) ;
     }
 
     public String getFullName(){

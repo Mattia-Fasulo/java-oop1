@@ -62,7 +62,8 @@ public class BankAccount {
         return moneyCount;
     }
 
-    public double withdrawal(double num){
+    public double balance(double num){
+        DecimalFormat df = new DecimalFormat("0.00 €");
         if(num < 0){
             System.out.println("Non puoi versare una cifra negativa!");
         } else {
@@ -70,11 +71,11 @@ public class BankAccount {
             if(moneyCount < 0){
                 double diff = moneyCount - 0;
                 double money = num - Math.abs(diff);
-                System.out.println("Hai superato il limite del tuo saldo, hai prelevato solamente: " + money);
+                System.out.println("Hai superato il limite del tuo saldo, hai prelevato solamente: " + df.format(money));
                 moneyCount = 0;
             } else {
-                System.out.println("Hai prelevato: " + num);
-                System.out.println("Saldo attuale: " + moneyCount);
+                System.out.println("Hai prelevato: " + df.format(num));
+                System.out.println("Saldo attuale: " + df.format(moneyCount));
             }
 
 

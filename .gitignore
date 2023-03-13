@@ -1,6 +1,6 @@
 ### IntelliJ IDEA ###
 .idea
-java-snacks.iml
+java-oop1.iml.iml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/

@@ -31,6 +31,7 @@ public class Bank {
             System.out.println();
             System.out.print("La tua scelta: ");
             operator = Integer.parseInt(scanner.nextLine());
+            System.out.println();
 
 
             if (operator == 1) {
@@ -40,7 +41,7 @@ public class Bank {
             } else if (operator == 2) {
                 System.out.print("Quanto desideri prelevare? ");
                 double money = Integer.parseInt(scanner.nextLine());
-                account1.withdrawal(money);
+                account1.balance(money);
             } else if(operator == 3){
                 System.out.println(account1.getName() + " " + account1.getMoneyCountFormatted());
             }else if (operator == 4) {
