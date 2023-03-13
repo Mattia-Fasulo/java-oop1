@@ -12,12 +12,20 @@ public class Bank {
         int operator;
 
         System.out.println("***********");
+        System.out.println("Benvenuto in Java Bank");
+        System.out.println("***********");
+        System.out.println();
 
-        BankAccount account1 = new BankAccount("Mattia");
+        System.out.print("A chi è intestato il conto?");
+        BankAccount account1 = new BankAccount(scanner.nextLine());
+        System.out.println();
+
+        System.out.println("Ho creato correttamente il conto :");
+        System.out.println("***********");
         System.out.println(account1);
         System.out.println(account1.getName() + " " + account1.getMoneyCountFormatted());
-
         System.out.println("***********");
+
         while(active) {
             System.out.println();
             System.out.println("Scegli quale operazione eseguire:");

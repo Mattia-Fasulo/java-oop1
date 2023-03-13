@@ -50,7 +50,7 @@ public class BankAccount {
 
     }
 
-    public double deposit(double num){
+    public void deposit(double num){
 
         if (num < 0){
             System.out.println("Non puoi versare una cifra negativa!");
@@ -59,10 +59,9 @@ public class BankAccount {
             moneyCount += num;
             System.out.println("Versamento avvenuto con successo");
         }
-        return moneyCount;
     }
 
-    public double balance(double num){
+    public void balance(double num){
         DecimalFormat df = new DecimalFormat("0.00 €");
         if(num < 0){
             System.out.println("Non puoi versare una cifra negativa!");
@@ -80,7 +79,6 @@ public class BankAccount {
 
 
         }
-        return moneyCount;
     }
 
     @Override
